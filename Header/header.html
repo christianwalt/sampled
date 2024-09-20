@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="script.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo-container">
+                <img src="/images/logo.png" alt="Pearlworth Foundation School Logo" class="school-logo">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/Home/home.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="about-us.html" class="dropdown-toggle">About <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/About/About_us/about.html">About Us</a></li>
+                            <li><a href="/About/Staff/staff.html">Staff</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/Admissions/admissions.html">Admissions</a></li>
+                    <li class="dropdown">
+                        <a href="#resources" class="dropdown-toggle">Resources <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li class="nested-dropdown">
+                                <a href="#parent-resources" class="nested-dropdown-toggle">Parent Resources <i class="fas fa-chevron-right"></i></a>
+                                <ul class="nested-dropdown-menu">
+                                    <li><a href="/Parent_resources/After_care/after-care.html">After Care</a></li>
+                                    <li><a href="/Parent_resources/School_circular/school-circular.html">School Circular</a></li>
+                                    <li><a href="/Parent_resources/Tuition&fees/tuition-fees.html">Tuition & Fees</a></li>
+                                    <li><a href="/Parent_resources/Uniform/uniform.html">Uniform</a></li>
+                                </ul>
+                            </li>
+                            <li class="nested-dropdown">
+                                <a href="#children-resources" class="nested-dropdown-toggle">Children Resources <i class="fas fa-chevron-right"></i></a>
+                                <ul class="nested-dropdown-menu">
+                                    <li><a href="/Children_resources/Homework/homework.html">Homework</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="/School_life/school-life.html">School Life</a></li>
+                    <li><a href="/Support_us/support-us.html">Support Us</a></li>
+                </ul>
+            </nav>
+            <div class="header-cta">
+                <a href="/Contact/contact.html" class="contact-button">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Off-canvas menu structure -->
+    <div class="off-canvas-menu">
+        <div class="off-canvas-exit">
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="off-canvas-nav">
+            <ul>
+                <li><a href="/Home/home.html">Home</a></li>
+                <li class="off-canvas-dropdown">
+                    <a href="about-us.html" class="off-canvas-dropdown-toggle">About <i class="fas fa-chevron-down"></i></a>
+                    <ul class="off-canvas-dropdown-menu">
+                        <li><a href="/About/About_us/about.html">About Us</a></li>
+                        <li><a href="/About/Staff/staff.html">Staff</a></li>
+                    </ul>
+                </li>
+                <li><a href="/Admissions/admissions.html">Admissions</a></li>
+                <li class="off-canvas-dropdown">
+                    <a href="#resources" class="off-canvas-dropdown-toggle">Resources <i class="fas fa-chevron-down"></i></a>
+                    <ul class="off-canvas-dropdown-menu">
+                        <li class="off-canvas-nested-dropdown">
+                            <a href="#parent-resources" class="off-canvas-nested-dropdown-toggle">Parent Resources <i class="fas fa-chevron-right"></i></a>
+                            <ul class="off-canvas-nested-dropdown-menu">
+                                <li><a href="/Parent_resources/After_care/after-care.html">After Care</a></li>
+                                <li><a href="/Parent_resources/School_circular/school-circular.html">School Circular</a></li>
+                                <li><a href="/Parent_resources/Tuition&fees/tuition-fees.html">Tuition & Fees</a></li>
+                                <li><a href="/Parent_resources/Uniform/uniform.html">Uniform</a></li>
+                            </ul>
+                        </li>
+                        <li class="off-canvas-nested-dropdown">
+                            <a href="#children-resources" class="off-canvas-nested-dropdown-toggle">Children Resources <i class="fas fa-chevron-right"></i></a>
+                            <ul class="off-canvas-nested-dropdown-menu">
+                                <li><a href="/Children_resources/Homework/homework.html">Homework</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="/School_life/school-life.html">School Life</a></li>
+                <li><a href="/Support_us/support-us.html">Support Us</a></li>
+                <li><a href="/Contact/contact.html" class="off-canvas-contact-button">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+</body>
+</html>

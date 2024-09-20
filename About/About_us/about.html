@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pearlworth Foundation School</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="icon" href="/images/logo.svg" type="image/svg+xml">
+    </head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo-container">
+                <img src="/images/logo.svg" alt="Pearlworth Foundation School Logo" class="school-logo">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/Home/home.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="about-us.html" class="dropdown-toggle">About <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/About/About_us/about.html">About Us</a></li>
+                            <li><a href="/About/Staff/staff.html">Staff</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/Admissions/admissions.html">Admissions</a></li>
+                    <li class="dropdown">
+                        <a href="/resources.html" class="dropdown-toggle">Resources <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li class="nested-dropdown">
+                                    <a href="/parent-resources.html" class="nested-dropdown-toggle">Parent Resources <i class="fas fa-chevron-right"></i></a>
+                                <ul class="nested-dropdown-menu">
+                                    <li><a href="/Parent_resources/After_care/after-care.html">After Care</a></li>
+                                    <li><a href="/Parent_resources/School_circular/school-circular.html">School Circular</a></li>
+                                    <li><a href="/Parent_resources/Tuition&fees/tuition-fees.html">Tuition & Fees</a></li>
+                                    <li><a href="/Parent_resources/Uniform/uniform.html">Uniform</a></li>
+                                </ul>
+                            </li>
+                            <li class="nested-dropdown">
+                                <a href="#children-resources" class="nested-dropdown-toggle">Children Resources <i class="fas fa-chevron-right"></i></a>
+                                <ul class="nested-dropdown-menu">
+                                        <li><a href="/Children_resources/Homework/homework.html">Homework</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="/School_life/school-life.html">School Life</a></li>
+                    <li><a href="/Support_us/support-us.html">Support Us</a></li>
+                </ul>
+            </nav>
+            <div class="header-cta">
+                    <a href="/Contact/contact.html" class="contact-button">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Off-canvas menu structure -->
+    <div class="off-canvas-menu">
+        <div class="off-canvas-exit">
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="off-canvas-nav">
+            <ul>
+                <li><a href="/Home/home.html">Home</a></li>
+                <li class="off-canvas-dropdown">
+                        <a href="/About/About_us/about.html" class="off-canvas-dropdown-toggle">About <i class="fas fa-chevron-down"></i></a>
+                    <ul class="off-canvas-dropdown-menu">
+                        <li><a href="/About/About_us/about.html">About Us</a></li>
+                        <li><a href="/About/Staff/staff.html">Staff</a></li>
+                    </ul>
+                </li>
+                    <li><a href="/Admissions/admissions.html">Admissions</a></li>
+                <li class="off-canvas-dropdown">
+                    <a href="/resources.html" class="off-canvas-dropdown-toggle">Resources <i class="fas fa-chevron-down"></i></a>
+                    <ul class="off-canvas-dropdown-menu">
+                        <li class="off-canvas-nested-dropdown">
+                            <a href="#parent-resources" class="off-canvas-nested-dropdown-toggle">Parent Resources <i class="fas fa-chevron-right"></i></a>
+                            <ul class="off-canvas-nested-dropdown-menu">
+                                <li><a href="/Parent_resources/After_care/after-care.html">After Care</a></li>
+                                <li><a href="/Parent_resources/School_circular/school-circular.html">School Circular</a></li>
+                                <li><a href="/Parent_resources/Tuition&fees/tuition-fees.html">Tuition & Fees</a></li>
+                                <li><a href="/Parent_resources/Uniform/uniform.html">Uniform</a></li>
+                            </ul>
+                        </li>
+                        <li class="off-canvas-nested-dropdown">
+                            <a href="#children-resources" class="off-canvas-nested-dropdown-toggle">Children Resources <i class="fas fa-chevron-right"></i></a>
+                            <ul class="off-canvas-nested-dropdown-menu">
+                                <li><a href="/Children_resources/Homework/homework.html">Homework</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="/School_life/school-life.html">School Life</a></li>
+                <li><a href="/Support_us/support-us.html">Support Us</a></li>
+                <li><a href="/Contact/contact.html" class="off-canvas-contact-button">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="white-card">
+                <div class="breadcrumb">
+                    <a href="/Home/home.html">Home</a> / About Us
+                </div>
+                <h1>Values and Vision</h1>
+                <p>We strive to be a Christian school that provides an environment that prepares the learner for the joy of service in this world and for the higher joy of wider service in the world to come. </p>
+                <a href="#motto-section" class="cta-button">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add this section after the hero section and before the history section -->
+    <section class="motto-section" id="motto-section">
+        <div class="container">
+            <div class="motto-content">
+                <h2>Our Motto</h2>
+                <div class="motto-text">
+                    <p class="school-motto">"Wisdom is worth more than all treasures"</p>
+                    <p class="bible-verse">"How much better to get wisdom than gold, to get insight rather than silver!"</p>
+                    <p class="verse-reference">- Proverbs 16:16</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="history-preview">
+        <div class="container">
+            <h2>Our History</h2>
+            <div class="history-content">
+                <div class="history-image">
+                    <img src="/images/about.svg" alt="Pearlworth Foundation School History">
+                </div>
+                <div class="history-text">
+                    <p>Pearlworth Foundation School has been nurturing young minds and shaping futures since its establishment in [Year]. Our journey began with a vision to provide quality Christian education that prepares students for a life of service and excellence.</p>
+                    <p>Over the years, we have grown from a small community school to a beacon of educational excellence, always staying true to our founding principles and values.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="goals-section">
+        <div class="container">
+            <h2>Our Goals</h2>
+            <div class="goals-grid">
+                <div class="goal-card">
+                    <i class="fas fa-seedling"></i>
+                    <h3>Sowing God's Word</h3>
+                    <p>To sow the word of God in learners, causing joy and praise to spring forth in their lives, filled with precious and pleasant riches for this lifetime and eternity. (Luke 8:11)</p>
+                </div>
+                <div class="goal-card">
+                    <i class="fas fa-award"></i>
+                    <h3>Instilling Life Skills</h3>
+                    <p>To instill principles of diligence, honesty, thrift, purity, and temperance as the secret of true success. "Seest thou a man diligent in his business? he shall stand before kings; he shall not stand before mean men." (Proverbs 22:29)</p>
+                </div>
+                <div class="goal-card">
+                    <i class="fas fa-music"></i>
+                    <h3>Uplifting Through Music</h3>
+                    <p>To teach the uses and benefits of music and song as a precious gift of God, designed to uplift thoughts, inspire and elevate the soul in spiritual growth, discipleship and Christian living.</p>
+                </div>
+                <div class="goal-card">
+                    <i class="fas fa-child"></i>
+                    <h3>Nurturing Simplicity</h3>
+                    <p>To train up children in childlike simplicity, fostering contentment with small, helpful duties and with the pleasures and experiences natural to their years.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="philosophy-preview">
+        <div class="container">
+            <h2>Our Educational Philosophy</h2>
+            <div class="philosophy-content">
+                <div class="philosophy-text">
+                    <p>At Pearlworth Foundation School, we believe in nurturing the whole child - mind, body, and spirit. Our educational philosophy is rooted in Christian values and focused on developing well-rounded individuals prepared for lifelong learning and service.</p>
+                    <p>We emphasize:</p>
+                    <ul>
+                        <li><i class="fas fa-arrow-circle-right"></i> Christ-centered education</li>
+                        <li><i class="fas fa-arrow-circle-right"></i> Academic excellence</li>
+                        <li><i class="fas fa-arrow-circle-right"></i> Character development</li>
+                        <li><i class="fas fa-arrow-circle-right"></i> Practical life skills</li>
+                    </ul>
+                </div>
+                <div class="philosophy-image">
+                    <img src="/images/2024 Preschool Class 1.svg" alt="Pearlworth Foundation School Educational Philosophy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="location-preview">
+        <div class="container">
+            <h2>Our Location</h2>
+            <div class="location-content">
+                <div class="location-map">
+                    <!-- Replace with your actual Google Maps embed code -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.815629886685!2d32.464576274176224!3d0.0665386643579959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177d85e88e10c0c9%3A0x4285ec6117537273!2sPearlworth%20Foundation%20School!5e0!3m2!1sen!2sug!4v1726385185005!5m2!1sen!2sug" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="location-info">
+                    <h3>Pearlworth Foundation School</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Plot 61/63 Nsamizi Road, Entebbe</p>
+                    <p><i class="fas fa-phone"></i> (+256) 771244590 / (+256) 756369925</p>
+                    <p><i class="fas fa-envelope"></i> pearlworth.edcare.com </p>
+                    <p>Our school is conveniently located in a peaceful neighborhood, providing a safe and nurturing environment for our students. With easy access to public transportation and ample parking, we're accessible to families from all around the area.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>About Pearlworth</h3>
+                    <p>Pearlworth Foundation School is dedicated to nurturing young minds and inspiring futures through quality education and holistic development.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/Home/home.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="/About/About_us/about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="/About/Staff/staff.html"><i class="fas fa-chevron-right"></i> Staff</a></li>
+                        <li><a href="/Admissions/admissions.html"><i class="fas fa-chevron-right"></i> Admissions</a></li>
+                        <li><a href="/Parent_resources/After_care/after-care.html"><i class="fas fa-chevron-right"></i> After Care</a></li>
+                        <li><a href="/Parent_resources/School_circular/school-circular.html"><i class="fas fa-chevron-right"></i> School Circular</a></li>
+                        <li><a href="/Parent_resources/Tuition&fees/tuition-fees.html"><i class="fas fa-chevron-right"></i> Tuition & Fees</a></li>
+                        <li><a href="/Parent_resources/Uniform/uniform.html"><i class="fas fa-chevron-right"></i> Uniform</a></li>
+                        <li><a href="/Children_resources/Homework/homework.html"><i class="fas fa-chevron-right"></i> Homework</a></li>
+                        <li><a href="/School_life/school-life.html"><i class="fas fa-chevron-right"></i> School Life</a></li>
+                        <li><a href="/Support_us/support-us.html"><i class="fas fa-chevron-right"></i> Support Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Plot 61/63 Nsamizi Road, Entebbe</p>
+                    <p><i class="fas fa-phone"></i> (+256) 771244590 / (+256) 756369925</p>
+                    <p><i class="fas fa-envelope"></i> pearlworth.edcare.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Pearlworth Foundation School. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

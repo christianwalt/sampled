@@ -1,0 +1,441 @@
+/* Add this at the top of your CSS file */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header Styles */
+.site-header {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 40px);
+    max-width: 1200px;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background: linear-gradient(to right, #ffffff 30%, #226730 30%, #166337);
+    border-radius: 10px;
+    transition: top 0.3s ease-in-out;
+}
+
+.site-header.scrolled {
+    top: 0;
+    border-radius: 0 0 10px 10px;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+.logo-container {
+    flex: 0 0 auto;
+    background-color: #ffffff;
+    padding-right: 2rem;
+}
+
+.school-logo {
+    height: 50px;
+    width: auto;
+}
+
+.main-nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.main-nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav li {
+    margin-left: 1.5rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: bottom right;
+}
+
+.main-nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.header-cta {
+    margin-left: 1.5rem;
+}
+
+.contact-button {
+    background-color: #c0392b;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(0);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.contact-button:hover::before {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.contact-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Dropdown styles */
+.main-nav .dropdown {
+    position: relative;
+}
+
+.main-nav .dropdown > a,
+.main-nav .nested-dropdown > a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-nav .dropdown > a .fa-chevron-down,
+.main-nav .nested-dropdown > a .fa-chevron-right {
+    font-size: 0.8em;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.main-nav .dropdown-menu,
+.main-nav .nested-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #226730;
+    min-width: 205px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 0 0 5px 5px;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+.main-nav .nested-dropdown-menu {
+    top: -10px;
+    left: 100%;
+    border-radius: 0 5px 5px 5px;
+    margin-top: 10px;
+}
+
+.main-nav .dropdown-menu li,
+.main-nav .nested-dropdown-menu li {
+    margin: 0;
+}
+
+.main-nav .dropdown-menu a,
+.main-nav .nested-dropdown-menu a {
+    color: #ffffff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.main-nav .dropdown-menu a::after,
+.main-nav .nested-dropdown-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+}
+
+.main-nav .dropdown-menu a:hover::after,
+.main-nav .nested-dropdown-menu a:hover::after {
+    width: calc(100% - 32px); /* Subtracting left and right padding */
+}
+
+.main-nav .dropdown-menu a:hover,
+.main-nav .nested-dropdown-menu a:hover {
+    background-color: transparent; /* Remove background color change on hover */
+}
+
+/* Show dropdown when active */
+.main-nav .dropdown.active > .dropdown-menu,
+.main-nav .nested-dropdown.active > .nested-dropdown-menu {
+    display: block;
+}
+
+/* Icon styles */
+.fa-chevron-down,
+.fa-chevron-right {
+    margin-left: 5px;
+    font-size: 0.8em;
+}
+
+.nested-dropdown > a .fa-chevron-right {
+    float: right;
+    margin-top: 5px;
+}
+
+/* Ensure icons are visible */
+.fas {
+    display: inline-block;
+}
+
+/* Rotate chevron when dropdown is active */
+.dropdown.active > a .fa-chevron-down,
+.nested-dropdown.active > a .fa-chevron-right {
+    transform: rotate(180deg);
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Off-canvas Menu */
+.off-canvas-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #226730;
+    overflow-y: auto;
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+.off-canvas-menu.active {
+    right: 0;
+}
+
+.off-canvas-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 60px 0 0 0;
+}
+
+.off-canvas-nav li {
+    margin: 0;
+}
+
+.off-canvas-nav a {
+    display: inline-block;
+    padding: 15px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+}
+
+.off-canvas-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 10px;
+    left: 20px;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+}
+
+.off-canvas-nav a:hover::after {
+    width: calc(100% - 40px);  /* Subtracting left and right padding */
+}
+
+.off-canvas-dropdown > a,
+.off-canvas-nested-dropdown > a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.off-canvas-dropdown-menu,
+.off-canvas-nested-dropdown-menu {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.off-canvas-dropdown-menu a,
+.off-canvas-nested-dropdown-menu a {
+    padding-left: 40px;
+}
+
+.off-canvas-dropdown-menu a::after,
+.off-canvas-nested-dropdown-menu a::after {
+    left: 40px;
+}
+
+.off-canvas-nested-dropdown-menu a {
+    padding-left: 60px;
+}
+
+.off-canvas-nested-dropdown-menu a::after {
+    left: 60px;
+}
+
+/* Shared styles for both contact buttons */
+.contact-button,
+.off-canvas-contact-button {
+    background-color: #c0392b;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-button::before,
+.off-canvas-contact-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: all 0.4s ease;
+}
+
+.contact-button:hover,
+.off-canvas-contact-button:hover {
+    background-color: #a93226;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.contact-button:hover::before,
+.off-canvas-contact-button:hover::before {
+    left: 100%;
+}
+
+.contact-button:active,
+.off-canvas-contact-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific styles for the off-canvas contact button */
+.off-canvas-contact-button {
+    display: block;
+    text-align: center;
+    margin: 20px;
+}
+
+/* Remove underline hover effect for off-canvas contact button */
+.off-canvas-nav .off-canvas-contact-button::after {
+    display: none;
+}
+
+/* Off-canvas Exit Button */
+.off-canvas-exit {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.off-canvas-exit span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+
+.off-canvas-exit span:first-child {
+    transform: rotate(45deg);
+}
+
+.off-canvas-exit span:last-child {
+    transform: rotate(-45deg);
+}
+
+/* Media Queries */
+@media screen and (max-width: 1200px) {
+    .main-nav, .header-cta {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .site-header .container {
+        justify-content: space-between;
+    }
+}
